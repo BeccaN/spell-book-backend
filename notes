@@ -1,5 +1,13 @@
-Spell
-belongs_to SpellBook
+SpellBook.spells << Spell
 
-SpellBook
-has_many Spells
+### NOTES
+
+* setup Rails API
+rails new spell-journal-backend --api --database=postgresql -T
+
+* make sure both ends are pushed to github
+
+* seed Spells from db.json info
+  - some instances will have different attributes than others
+
+* refresh on getting postgresql db started
