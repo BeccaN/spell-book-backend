@@ -1,0 +1,5 @@
+Spell
+belongs_to SpellBook
+
+SpellBook
+has_many Spells
