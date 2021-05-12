@@ -45,6 +45,7 @@ GEM
     activerecord (6.0.3.7)
       activemodel (= 6.0.3.7)
       activesupport (= 6.0.3.7)
+    activerecord-reset-pk-sequence (0.2.1)
     activestorage (6.0.3.7)
       actionpack (= 6.0.3.7)
       activejob (= 6.0.3.7)
@@ -174,6 +175,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  activerecord-reset-pk-sequence
   bootsnap (>= 1.4.2)
   byebug
   listen (~> 3.2)

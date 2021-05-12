@@ -1,3 +1,6 @@
+Spell.delete_all
+Spell.reset_pk_sequence
+
 spells = [
   {
     "name":"Abi-Dalzim's Horrid Wilting",
@@ -6372,7 +6375,7 @@ spells.each do |spell|
   if spell[:material]
     new_spell.material = spell[:material]
   else 
-    new_spell.material = nil
+    new_spell.material = "none"
   end
 
   #save new_spell to db
