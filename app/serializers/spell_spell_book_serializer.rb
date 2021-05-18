@@ -1,6 +1,4 @@
 class SpellSpellBookSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :spell_id, :spell_book_id
 
-  belongs_to :spell
-  belongs_to :spell_book
 end
