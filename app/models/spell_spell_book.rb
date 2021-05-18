@@ -2,6 +2,8 @@ class SpellSpellBook < ApplicationRecord
   belongs_to :spell
   belongs_to :spell_book
 
+  validates :spell_book_id, uniqueness: {scope: :spell_id}
+
   def spell_id
     self.spell.id
   end

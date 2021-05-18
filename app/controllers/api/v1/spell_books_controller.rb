@@ -20,7 +20,15 @@ class Api::V1::SpellBooksController < ApplicationController
 
   def destroy
     spell_book = SpellBook.find(params[:id])
-    spell_book.destroy
+    if spell_book.destroy
+      render json: {message: 'Spell Book was destroyed!'}
+    else
+      render json: {error: 'Something went wrong during Spell Book destruction...'}
+    end
+  end
+
+  def update
+    byebug
   end
   
   private
