@@ -1,5 +1,5 @@
-class Api::V1::SpellBooksController < ApplicationController
-  skip_before_action :authorized, only: [:create]
+class Api::V1::SpellBooksController < ApplicationController  
+  skip_before_action :authorized
   
   def index
     spell_books = SpellBook.all
