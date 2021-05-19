@@ -1,4 +1,6 @@
 class Api::V1::SpellBooksController < ApplicationController
+  skip_before_action :authorized, only: [:create]
+  
   def index
     spell_books = SpellBook.all
     render json: spell_books
