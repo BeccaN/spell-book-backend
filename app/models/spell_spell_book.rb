@@ -11,4 +11,8 @@ class SpellSpellBook < ApplicationRecord
   def spell_book_id
     self.spell_book.id
   end
+
+  def user_id
+    self.spell_book.user_id
+  end
 end

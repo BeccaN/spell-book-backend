@@ -7,6 +7,9 @@ SpellBook.reset_pk_sequence
 SpellSpellBook.delete_all
 SpellSpellBook.reset_pk_sequence
 
+User.delete_all
+User.reset_pk_sequence
+
 spells = [
   {
     "name":"Abi-Dalzim's Horrid Wilting",

@@ -4,4 +4,8 @@ class SpellBook < ApplicationRecord
   has_many :spells, :through => :spell_spell_books
 
   validates :title, presence: true
+
+  def user_id
+    self.user.id
+  end
 end
