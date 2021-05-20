@@ -8,4 +8,8 @@ class SpellBook < ApplicationRecord
   def user_id
     self.user.id
   end
+  
+  def username
+    self.user.username
+  end
 end
