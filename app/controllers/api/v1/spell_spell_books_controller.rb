@@ -13,7 +13,7 @@ class Api::V1::SpellSpellBooksController < ApplicationController
     if spell_spell_book.save
       render json: [spell_spell_book, spell_book]
     else
-      render json: {error: 'Error creating association between spell and spell book.'}
+      render json: {error: 'Cannot add the same spell to spellbook more than once.'}
     end
   end
 
