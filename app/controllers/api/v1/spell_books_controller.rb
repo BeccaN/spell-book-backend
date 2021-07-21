@@ -2,9 +2,9 @@ class Api::V1::SpellBooksController < ApplicationController
   skip_before_action :authorized
   
   def index
-    # spell_books = SpellBook.all
     byebug
-    spell_books = current_user.spell_books
+    spell_books = SpellBook.all
+    # spell_books = current_user.spell_books
     render json: spell_books
   end
 
