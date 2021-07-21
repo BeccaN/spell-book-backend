@@ -2,7 +2,14 @@ class Api::V1::SpellSpellBooksController < ApplicationController
   skip_before_action :authorized
   
   def index
-    spell_spell_books = SpellSpellBook.all
+    spell_spell_books = []
+
+    current_user.spell_books.each do |book|
+      book.spell_spell_books.each do |join|
+        spell_spell_books << join
+      end
+    end
+
     render json: spell_spell_books
   end
 
